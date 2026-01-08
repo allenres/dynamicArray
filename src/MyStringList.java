@@ -1,8 +1,10 @@
 public class MyStringList implements StringList {
     private int size;
     private String[] stringArr;
+    private int end;
 
     public MyStringList() {
+        this.end = 0;
     }
 
     /**
@@ -35,7 +37,9 @@ public class MyStringList implements StringList {
      * @param value the string to add to the list.
      */
     public void add(String value) {
-
+        stringArr[end] = value;
+        end++;
+        size++;
     }
 
     /**

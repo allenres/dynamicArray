@@ -28,6 +28,6 @@ public class MyStringListTest {
 
     @Test
     void testSize() {
-
+        MyStringList myStringList = new MyStringList();
     }
 }
