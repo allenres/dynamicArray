@@ -1,7 +1,8 @@
 public class MyStringList implements StringList {
+    private int size;
+    private String[] stringArr;
 
     public MyStringList() {
-
     }
 
     /**
@@ -55,7 +56,12 @@ public class MyStringList implements StringList {
      * @return the size of the list.
      */
     public int size() {
-        return -1;
+        for (String s : stringArr) {
+            if (s != null) {
+                size++;
+            }
+        }
+        return size;
     }
 
     /**
