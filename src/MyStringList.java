@@ -1,6 +1,6 @@
 public class MyStringList implements StringList {
-    private int size;
     private String[] stringArr;
+    private int size;
     private int end;
 
     public MyStringList() {
@@ -51,7 +51,14 @@ public class MyStringList implements StringList {
      *                                   index >= size()).
      */
     public String remove(int index) {
-        return "";
+        int toRemove = index;
+        if (toRemove < 0 || toRemove >= size()) {
+            throw new IndexOutOfBoundsException("index is out of range");
+        }
+        for (int i = toRemove; i < stringArr.length -1; i++) {
+            stringArr[i] = stringArr[i + 1];
+        }
+        return stringArr[toRemove];
     }
 
     /**
