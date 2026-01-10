@@ -16,7 +16,8 @@ public class MyStringList implements StringList {
      *                                   index >= size()).
      */
     public String get(int index) {
-        return "";
+        if (index < 0 || index >= size()) { throw new IndexOutOfBoundsException("index is out of range"); }
+        return stringArr[index];
     }
 
     /**
