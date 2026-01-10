@@ -86,6 +86,7 @@ public class MyStringList implements StringList {
      * @return the capacity of the list.
      */
     public int capacity() {
-        return -1;
+        int capacity = stringArr.length;
+        return capacity;
     }
 }
