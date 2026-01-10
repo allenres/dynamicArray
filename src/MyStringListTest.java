@@ -5,7 +5,14 @@ import org.junit.jupiter.api.Test;
 public class MyStringListTest {
     @Test
     void testAdd() {
-
+        //Arrange
+        MyStringList myStringList = new MyStringList();
+        //Act
+        myStringList.add("test");
+        myStringList.add("best");
+        //Assert
+        assertEquals("test", myStringList.get(0));
+        assertEquals("best", myStringList.get(1));
     }
 
     @Test
@@ -25,7 +32,14 @@ public class MyStringListTest {
 
     @Test
     void testRemove() {
-
+        //Arrange
+        MyStringList myStringList = new MyStringList();
+        //Act
+        myStringList.add("test");
+        myStringList.add("pest");
+        String actual = myStringList.remove(0);
+        //Assert
+        assertEquals("test", actual);
     }
 
     @Test

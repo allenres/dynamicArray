@@ -60,10 +60,10 @@ public class MyStringList implements StringList {
         if (toRemove < 0 || toRemove >= size()) {
             throw new IndexOutOfBoundsException("index is out of range");
         }
-        for (int i = toRemove; i < stringArr.length -1; i++) {
+        for (int i = toRemove; i < stringArr.length - 1; i++) {
             stringArr[i] = stringArr[i + 1];
         }
-        return stringArr[toRemove];
+        return stringArr[index];
     }
 
     /**
