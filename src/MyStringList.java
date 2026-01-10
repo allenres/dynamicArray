@@ -4,6 +4,7 @@ public class MyStringList implements StringList {
     private int end;
 
     public MyStringList() {
+        this.stringArr = new String[5];
         this.end = 0;
     }
 
