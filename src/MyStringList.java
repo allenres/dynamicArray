@@ -28,7 +28,10 @@ public class MyStringList implements StringList {
      *                                   index >= size()).
      */
     public void set(int index, String value) {
-
+        if (index < 0 || index >= size()) {
+            throw new IndexOutOfBoundsException("index is out of range");
+        }
+        stringArr[index] = value;
     }
 
     /**
