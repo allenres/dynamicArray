@@ -68,4 +68,14 @@ public class MyStringListTest {
         int actual = 2;
         assertEquals(myStringList.size(), actual);
     }
+
+    @Test
+    void testOverCapacity() {
+        MyStringList list = new MyStringList();
+        for(int i = 0; i < 6; i++) {
+            list.add("item" + i);
+        }
+        assertEquals(10, list.capacity());
+        assertEquals(6, list.size());
+    }
 }
