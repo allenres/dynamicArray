@@ -57,13 +57,19 @@ public class MyStringList implements StringList {
      */
     public String remove(int index) {
         int toRemove = index;
+        
         if (toRemove < 0 || toRemove >= size()) {
             throw new IndexOutOfBoundsException("index is out of range");
         }
-        for (int i = toRemove; i < stringArr.length - 1; i++) {
+
+        String wordRemoved = stringArr[toRemove];
+
+        for (int i = toRemove; i < size - 1; i++) {
             stringArr[i] = stringArr[i + 1];
         }
-        return stringArr[index];
+        size--;
+
+        return wordRemoved;
     }
 
     /**
