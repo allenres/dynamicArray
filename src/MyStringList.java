@@ -78,11 +78,6 @@ public class MyStringList implements StringList {
      * @return the size of the list.
      */
     public int size() {
-        for (String s : stringArr) {
-            if (s != null) {
-                size++;
-            }
-        }
         return size;
     }
 

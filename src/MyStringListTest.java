@@ -50,5 +50,10 @@ public class MyStringListTest {
     @Test
     void testSize() {
         MyStringList myStringList = new MyStringList();
+        //Act
+        myStringList.add("test");
+        myStringList.add("pest");
+        int actual = 2;
+        assertEquals(myStringList.size(), actual);
     }
 }
