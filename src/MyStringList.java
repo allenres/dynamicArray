@@ -41,8 +41,19 @@ public class MyStringList implements StringList {
      * @param value the string to add to the list.
      */
     public void add(String value) {
+        if (size == stringArr.length) {
+            resize();
+        }
         stringArr[size] = value;
         size++;
+    }
+
+    private void resize() {
+        String[] newArr = new String[stringArr.length * 2];
+        for(int i = 0; i < stringArr.length; i++) {
+            newArr[i] = stringArr[i];
+        }
+        stringArr = newArr;
     }
 
     /**
