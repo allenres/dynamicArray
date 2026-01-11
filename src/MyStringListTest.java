@@ -27,7 +27,12 @@ public class MyStringListTest {
 
     @Test
     void testGet() {
-
+        MyStringList myStringList = new MyStringList();
+        //Act
+        myStringList.add("test");
+        myStringList.add("pest");
+        String actual = myStringList.get(1);
+        assertEquals("pest", actual);
     }
 
     @Test
@@ -44,7 +49,14 @@ public class MyStringListTest {
 
     @Test
     void testSet() {
+        MyStringList myStringList = new MyStringList();
+        //Act
+        myStringList.add("test");
+        myStringList.add("pest");
 
+        myStringList.set(1, "car");
+        String actual = myStringList.get(1);
+        assertEquals("car", actual);
     }
 
     @Test
